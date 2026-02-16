@@ -2,12 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kartik Chaudhary | Portfolio</title>
+    <title>Kartik | Static Website</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
+            line-height: 1.6;
             background: #f4f4f4;
             color: #333;
         }
@@ -15,84 +21,99 @@
         header {
             background: #111;
             color: white;
+            padding: 1rem;
             text-align: center;
-            padding: 2rem 1rem;
+        }
+
+        nav {
+            margin-top: 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: #0077cc;
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
         }
 
         section {
             padding: 2rem;
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
         }
 
-        h2 {
-            border-bottom: 2px solid #111;
-            padding-bottom: 0.5rem;
-        }
-
-        .project {
+        .card {
             background: white;
             padding: 1rem;
             margin: 1rem 0;
             border-radius: 8px;
         }
 
-        .project a {
-            text-decoration: none;
-            color: #0077cc;
-            font-weight: bold;
-        }
-
         footer {
-            text-align: center;
-            padding: 1rem;
             background: #111;
             color: white;
+            text-align: center;
+            padding: 1rem;
             margin-top: 2rem;
         }
     </style>
 </head>
+
 <body>
 
-    <header>
-        <h1>Kartik Chaudhary</h1>
-        <p>Computer Science Student</p>
-    </header>
+<header>
+    <h1>Kartik Chaudhary</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a first-year Computer Science student focused on building strong
-            fundamentals in programming, data structures, and problem solving.
-        </p>
-    </section>
+<section id="home" class="hero">
+    <h2>Welcome to My Website</h2>
+    <p>Computer Science student building strong coding fundamentals.</p>
+</section>
 
-    <section id="projects">
-        <h2>Projects</h2>
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a first-year CSE student learning programming,
+        data structures, and problem solving.
+    </p>
+</section>
 
-        <div class="project">
-            <h3>Linked List in C</h3>
-            <p>Implementation of singly and doubly linked lists in C.</p>
-            <a href="#">View Code</a>
-        </div>
+<section id="projects">
+    <h2>Projects</h2>
 
-        <div class="project">
-            <h3>Array Operations in C</h3>
-            <p>Programs for insertion, deletion, and traversal of arrays.</p>
-            <a href="#">View Code</a>
-        </div>
+    <div class="card">
+        <h3>Linked List in C</h3>
+        <p>Basic implementation of singly and doubly linked lists.</p>
+    </div>
 
-    </section>
+    <div class="card">
+        <h3>Array Operations</h3>
+        <p>Programs for insertion, deletion, and traversal.</p>
+    </div>
+</section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: your-email@example.com</p>
-        <p>GitHub: github.com/yourusername</p>
-    </section>
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: your-email@example.com</p>
+    <p>GitHub: github.com/yourusername</p>
+</section>
 
-    <footer>
-        <p>© 2026 Kartik Chaudhary</p>
-    </footer>
+<footer>
+    <p>© 2026 Kartik Chaudhary</p>
+</footer>
 
 </body>
 </html>
