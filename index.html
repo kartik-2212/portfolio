@@ -1,112 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Kartik | Static Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kartik Chaudhary | Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background: #f4f4f4;
-            color: #333;
-        }
+body {
+    background: #0f172a;
+    color: white;
+    line-height: 1.6;
+}
 
-        header {
-            background: #111;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background: rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+}
 
-        nav {
-            margin-top: 0.5rem;
-        }
+nav h1 {
+    color: #38bdf8;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
 
-        .hero {
-            background: #0077cc;
-            color: white;
-            text-align: center;
-            padding: 4rem 1rem;
-        }
+nav a:hover {
+    color: #38bdf8;
+}
 
-        section {
-            padding: 2rem;
-            max-width: 900px;
-            margin: auto;
-        }
+/* HERO SECTION */
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
 
-        .card {
-            background: white;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 8px;
-        }
+.hero h2 {
+    font-size: 3rem;
+}
 
-        footer {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-    </style>
+.hero span {
+    color: #38bdf8;
+}
+
+.hero p {
+    margin: 15px 0;
+    color: #cbd5f5;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #38bdf8;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 10%;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+/* PROJECT CARDS */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #020617;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    animation: slideUp 1s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: #0f172a;
+}
+
+/* CONTACT */
+.contact p {
+    margin: 10px 0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav div {
+        margin-top: 10px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>Kartik Chaudhary</h1>
-    <nav>
-        <a href="#home">Home</a>
+<nav>
+    <h1>Kartik</h1>
+    <div>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-    </nav>
-</header>
+    </div>
+</nav>
 
-<section id="home" class="hero">
-    <h2>Welcome to My Website</h2>
-    <p>Computer Science student building strong coding fundamentals.</p>
+<section class="hero">
+    <h2>Hi, I'm <span>Kartik</span></h2>
+    <p>Computer Science Student | Learning Programming & DSA</p>
+    <button class="btn">View My Work</button>
 </section>
 
 <section id="about">
-    <h2>About Me</h2>
+    <h3>About Me</h3>
     <p>
-        I am a first-year CSE student learning programming,
-        data structures, and problem solving.
+        I’m a first-year CSE student focused on building strong fundamentals
+        in programming, data structures, and problem solving.
     </p>
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
+    <h3>Projects</h3>
+    <div class="projects">
+        <div class="card">
+            <h4>Linked List in C</h4>
+            <p>Implementation of singly and doubly linked lists.</p>
+        </div>
 
-    <div class="card">
-        <h3>Linked List in C</h3>
-        <p>Basic implementation of singly and doubly linked lists.</p>
-    </div>
+        <div class="card">
+            <h4>Array Operations</h4>
+            <p>Insertion, deletion, and traversal programs.</p>
+        </div>
 
-    <div class="card">
-        <h3>Array Operations</h3>
-        <p>Programs for insertion, deletion, and traversal.</p>
+        <div class="card">
+            <h4>Python Data Analysis</h4>
+            <p>Basic Olympic dataset analysis using Python.</p>
+        </div>
     </div>
 </section>
 
-<section id="contact">
-    <h2>Contact</h2>
+<section id="contact" class="contact">
+    <h3>Contact</h3>
     <p>Email: your-email@example.com</p>
     <p>GitHub: github.com/yourusername</p>
 </section>
